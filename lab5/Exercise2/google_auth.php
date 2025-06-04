@@ -3,9 +3,9 @@ require_once 'vendor/autoload.php';
 
 // Initialize the Google Client with provided credentials
 $client = new Google_Client();
-$client->setClientId('GOOGLE_CLIENT_ID');
-$client->setClientSecret('GOOGLE_CLIENT_SECRET');
-$client->setRedirectUri('GOOGLE_REDIRECT_URI');
+$client->setClientId = getenv("GOOGLE_CLIENT_ID");
+$client->setClientSecret = getenv('GOOGLE_CLIENT_SECRET');
+$client->setRedirectUri = getenv('GOOGLE_REDIRECT_URI');
 $client->addScope('email');
 $client->addScope('profile');
 
